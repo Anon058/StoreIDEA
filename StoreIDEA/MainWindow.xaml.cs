@@ -28,7 +28,7 @@ namespace StoreIDEA
 
         private void EnterButton_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(loginTb.Text) || string.IsNullOrEmpty(passTb.Text))
+            if (string.IsNullOrEmpty(loginTb.Text) && string.IsNullOrEmpty(passTb.Text))
             {
                 MessageBox.Show("Вы не заполнили все поля", "Не критическая ошибка", MessageBoxButton.OK,MessageBoxImage.Warning);
                 return;
@@ -40,12 +40,19 @@ namespace StoreIDEA
                 MessageBox.Show("Такого пользователя нет", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-
+            StaticObjects.users = user;
             if(user.Password == passTb.Text)
             {
-                ProductWindow product = new ProductWindow();
-
+                MessageBox.Show("Вы успешно авторизовались");
+                StaticObjects.desktopFrame.Navigate(new ProductPage());
+                this.Close();
             }
+        }
+
+        private void EnterGuestButton_Click(object sender, RoutedEventArgs e)
+        {
+            StaticObjects.desktopFrame.Navigate(new ProductPage());
+            this.Close();
         }
     }
 }

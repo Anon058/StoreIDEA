@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>idea_logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
@@ -65,13 +68,26 @@
     <Compile Include="Categories.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DesktopWindow.xaml.cs">
+      <DependentUpon>DesktopWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manufacturers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="OrderDetails.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -82,15 +98,16 @@
     <Compile Include="PickupPoints.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProductPage.xaml.cs">
+      <DependentUpon>ProductPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Products.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductWindow.xaml.cs">
-      <DependentUpon>ProductWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Roles.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="StaticObjects.cs" />
     <Compile Include="Statuses.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -103,6 +120,10 @@
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Page Include="DesktopWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -115,22 +136,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ProductWindow.xaml">
+    <Page Include="ProductPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -165,19 +176,66 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\picture.png" />
+    <Resource Include="idea_logo.ico" />
+    <Resource Include="Images\birth1.jpg" />
+    <Resource Include="Images\birth2.jpg" />
+    <Resource Include="Images\birth4.jpg" />
+    <Resource Include="Images\bus1.jpg" />
+    <Resource Include="Images\bus2.jpg" />
+    <Resource Include="Images\bus4.jpg" />
+    <Resource Include="Images\decor1.jpg" />
+    <Resource Include="Images\decor2.jpg" />
+    <Resource Include="Images\decor4.jpg" />
+    <Resource Include="Images\easter1.jpg" />
+    <Resource Include="Images\easter2.jpg" />
+    <Resource Include="Images\easter4.jpg" />
+    <Resource Include="Images\figur1.jpg" />
+    <Resource Include="Images\figur2.jpg" />
+    <Resource Include="Images\figur3.jpg" />
+    <Resource Include="Images\figur5.jpg" />
+    <Resource Include="Images\fun1.jpg" />
+    <Resource Include="Images\fun2.jpg" />
+    <Resource Include="Images\fun4.jpg" />
+    <Resource Include="Images\idea_logo.ico" />
+    <Resource Include="Images\idea_logo.png" />
+    <Resource Include="Images\key1.jpg" />
+    <Resource Include="Images\key2.jpg" />
+    <Resource Include="Images\key4.jpg" />
+    <Resource Include="Images\magn1.jpg" />
+    <Resource Include="Images\magn2.jpg" />
+    <Resource Include="Images\magn4.jpg" />
+    <Resource Include="Images\newyear1.jpg" />
+    <Resource Include="Images\newyear2.jpg" />
+    <Resource Include="Images\newyear4.jpg" />
+    <Resource Include="Images\rom1.jpg" />
+    <Resource Include="Images\rom2.jpg" />
+    <Resource Include="Images\rom4.jpg" />
+    <Resource Include="Images\souv1.jpg" />
+    <Resource Include="Images\souv2.jpg" />
+    <Resource Include="Images\souv4.jpg" />
+    <Resource Include="Images\tea1.jpg" />
+    <Resource Include="Images\tea2.jpg" />
+    <Resource Include="Images\tea4.jpg" />
+    <Resource Include="Images\text1.jpg" />
+    <Resource Include="Images\text2.jpg" />
+    <Resource Include="Images\text4.jpg" />
+    <Resource Include="Images\wedd1.jpg" />
+    <Resource Include="Images\wedd2.jpg" />
+    <Resource Include="Images\wedd4.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

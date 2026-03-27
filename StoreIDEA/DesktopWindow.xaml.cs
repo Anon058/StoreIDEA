@@ -15,13 +15,15 @@ using System.Windows.Shapes;
 namespace StoreIDEA
 {
     /// <summary>
-    /// Логика взаимодействия для ProductWindow.xaml
+    /// Логика взаимодействия для DesktopWindow.xaml
     /// </summary>
-    public partial class ProductWindow : Window
+    public partial class DesktopWindow : Window
     {
-        public ProductWindow()
+        public DesktopWindow()
         {
             InitializeComponent();
+            StaticObjects.desktopFrame = DesktopFrame;
+            new MainWindow().ShowDialog();
         }
     }
 }
