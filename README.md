@@ -1,7 +1,6 @@
-script:
 USE [user46020]
 GO
-/****** Object:  Table [dbo].[Categories]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[Categories]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15,7 +14,7 @@ CREATE TABLE [dbo].[Categories](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Manufacturers]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[Manufacturers]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -29,7 +28,7 @@ CREATE TABLE [dbo].[Manufacturers](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[OrderDetails]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[OrderDetails]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -45,7 +44,7 @@ CREATE TABLE [dbo].[OrderDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Orders]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[Orders]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -64,7 +63,7 @@ CREATE TABLE [dbo].[Orders](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PickupPoints]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[PickupPoints]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -78,7 +77,7 @@ CREATE TABLE [dbo].[PickupPoints](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Products]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[Products]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -95,14 +94,14 @@ CREATE TABLE [dbo].[Products](
 	[Discount] [int] NULL,
 	[QuantityInStock] [int] NULL,
 	[Description] [nvarchar](100) NULL,
-	[image] [varbinary](max) NULL,
+	[image] [nvarchar](max) NULL,
  CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
 (
 	[ProductID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Roles]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[Roles]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -116,7 +115,7 @@ CREATE TABLE [dbo].[Roles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Statuses]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[Statuses]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -130,7 +129,7 @@ CREATE TABLE [dbo].[Statuses](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Suppliers]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[Suppliers]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -144,7 +143,7 @@ CREATE TABLE [dbo].[Suppliers](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UnitOfMeasurements]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[UnitOfMeasurements]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -158,7 +157,7 @@ CREATE TABLE [dbo].[UnitOfMeasurements](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Users]    Script Date: 26.03.2026 10:54:57 ******/
+/****** Object:  Table [dbo].[Users]    Script Date: 27.03.2026 11:23:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -353,70 +352,70 @@ INSERT [dbo].[PickupPoints] ([PickupPointID], [Address]) VALUES (18, N'390000, �
 INSERT [dbo].[PickupPoints] ([PickupPointID], [Address]) VALUES (19, N'150000, г. Ярославль, ул. Кирова, 114')
 INSERT [dbo].[PickupPoints] ([PickupPointID], [Address]) VALUES (20, N'302028, г. Орел, ул. Ленина, 128')
 GO
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (1, N'FIGUR001', N'Статуэтка "Сова" (керамика)', 1, 890, 1, 1, 1, 5, 34, N'Ручная роспись, высота 12см', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (2, N'FIGUR002', N'Статуэтка "Кот" (керамика)', 1, 990, 1, 1, 1, 4, 28, N'Гжель, сине-белая роспись', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (3, N'FIGUR003', N'Статуэтка "Дракон" (металл)', 1, 1290, 1, 2, 2, 3, 12, N'Каслинское литье, чугун', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (4, N'FIGUR004', N'Статуэтка "Лошадь" (дерево)', 1, 790, 1, 3, 3, 4, 23, N'Хохломская роспись', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (5, N'FIGUR005', N'Матрешка (5 в 1)', 1, 1590, 1, 4, 3, 5, 19, N'Классическая, ручная роспись', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (6, N'MAGN001', N'Магнит "Москва" (Кремль)', 1, 190, 2, 5, 4, 4, 156, N'Сувенирный, керамика', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (7, N'MAGN002', N'Магнит "Санкт-Петербург"', 1, 190, 2, 5, 4, 3, 145, N'Символы города', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (8, N'MAGN003', N'Магнит "Кот" (забавный)', 1, 150, 2, 6, 4, 5, 234, N'Смешной, с надписью', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (9, N'MAGN004', N'Набор магнитов "Города" (10 шт)', 2, 1590, 2, 5, 4, 4, 23, N'Разные города России', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (10, N'KEY001', N'Брелок "Подкова" (металл)', 1, 290, 3, 7, 5, 4, 78, N'На удачу, никель', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (11, N'KEY002', N'Брелок "Монета" (счастливая)', 1, 350, 3, 7, 5, 3, 67, N'С инкрустацией, латунь', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (12, N'KEY003', N'Брелок "Животное" (кошка)', 1, 190, 3, 6, 5, 5, 89, N'Мягкий, плюшевый', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (13, N'KEY004', N'Набор брелоков (6 шт)', 2, 890, 3, 6, 5, 4, 34, N'Разные фигурки', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (14, N'KEY005', N'Брелок "Автомобильный"', 1, 390, 3, 8, 5, 3, 45, N'С подсветкой, кожа', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (15, N'TEA001', N'Чайный набор "Русский чай"', 2, 1290, 4, 9, 6, 5, 23, N'Чай, пряники, мед', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (16, N'TEA002', N'Чайный набор "Китайский"', 2, 1590, 4, 10, 6, 4, 18, N'Пуэр, чайник, пиалы', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (17, N'TEA003', N'Чайная пара (чашка+блюдце)', 2, 690, 4, 11, 6, 3, 34, N'Фарфор, золотой ободок', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (18, N'TEA004', N'Самовар (сувенирный) 1л', 1, 2990, 4, 12, 6, 5, 7, N'Сувенирный, расписной', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (19, N'TEA005', N'Пряники тульские (набор)', 2, 590, 4, 12, 6, 4, 45, N'Печатные, разные начинки', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (20, N'NEWYEAR001', N'Елочная игрушка "Шар" (стекло)', 1, 390, 5, 13, 7, 5, 67, N'Красный, с блестками', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (21, N'NEWYEAR002', N'Елочная игрушка "Шишка"', 1, 290, 5, 13, 7, 4, 89, N'Золотая, пластик', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (22, N'NEWYEAR003', N'Набор игрушек (10 шт)', 2, 1990, 5, 13, 7, 5, 23, N'Разноцветные шары', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (23, N'NEWYEAR004', N'Гирлянда светодиодная 3м', 1, 890, 5, 14, 7, 4, 34, N'50 лампочек, мультицвет', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (24, N'NEWYEAR005', N'Искусственная елка 150см', 1, 3990, 5, 13, 7, 3, 12, N'Сборная, в коробке', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (25, N'EASTER001', N'Пасхальное яйцо (дерево)', 1, 490, 6, 3, 8, 4, 45, N'Ручная роспись', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (26, N'EASTER002', N'Пасхальный набор (яйца+салфетки)', 2, 890, 6, 15, 8, 5, 23, N'5 яиц, наклейки', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (27, N'EASTER003', N'Кулич сувенирный (керамика)', 1, 590, 6, 1, 8, 3, 19, N'С росписью', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (28, N'EASTER004', N'Пасхальный венок', 1, 990, 6, 16, 8, 4, 12, N'Декоративный, с цветами', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (29, N'WEDD001', N'Свадебный бокалы (пара)', 2, 1590, 7, 17, 9, 5, 9, N'С гравировкой, хрусталь', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (30, N'WEDD002', N'Свадебный альбом (кожа)', 1, 2990, 7, 18, 9, 4, 7, N'30х30см, 50 листов', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (31, N'WEDD003', N'Подкова на свадьбу', 1, 890, 7, 7, 9, 3, 12, N'Деревянная, расписная', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (32, N'WEDD004', N'Свечи свадебные (набор)', 2, 690, 7, 19, 9, 4, 23, N'2 шт, с декором', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (33, N'BIRTH001', N'Открытка музыкальная', 1, 290, 8, 20, 10, 4, 67, N'С днем рождения, с мелодией', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (34, N'BIRTH002', N'Открытка 3D (поп-ап)', 1, 390, 8, 20, 10, 3, 56, N'Объемная, ручная работа', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (35, N'BIRTH003', N'Набор открыток (12 шт)', 2, 590, 8, 20, 10, 5, 34, N'Разные поводы', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (36, N'BIRTH004', N'Подарочная коробка (средняя)', 1, 190, 8, 21, 10, 2, 89, N'С крышкой, красная', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (37, N'BIRTH005', N'Подарочный пакет (большой)', 1, 99, 8, 21, 10, 3, 145, N'С ручками, праздничный', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (38, N'SOUV001', N'Шкатулка "Хохлома" (малая)', 1, 990, 1, 3, 11, 5, 23, N'Дерево, роспись', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (39, N'SOUV002', N'Шкатулка "Палех" (средняя)', 1, 2990, 1, 22, 11, 4, 8, N'Лаковая миниатюра', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (40, N'SOUV003', N'Шкатулка музыкальная', 1, 1990, 1, 23, 11, 5, 12, N'С вращающейся балериной', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (41, N'SOUV004', N'Ларец (деревянный)', 1, 1590, 1, 3, 11, 3, 15, N'С замком, резной', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (42, N'TEXT001', N'Платок павловопосадский', 1, 2490, 9, 24, 12, 5, 14, N'Шерсть, цветочный узор', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (43, N'TEXT002', N'Полотенце "Петухи" (льняное)', 1, 890, 9, 25, 12, 4, 23, N'С вышивкой, традиционное', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (44, N'TEXT003', N'Скатерть с вышивкой', 1, 1990, 9, 25, 12, 5, 9, N'Лен, 140х180см', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (45, N'TEXT004', N'Прихватки (набор 2 шт)', 2, 390, 9, 25, 12, 3, 45, N'С петухами, яркие', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (46, N'DECOR001', N'Панно настенное "Птица счастья"', 1, 1290, 10, 26, 13, 4, 12, N'Дерево, резьба', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (47, N'DECOR002', N'Картина по номерам (набор)', 2, 890, 10, 27, 13, 5, 23, N'40х50см, краски в наборе', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (48, N'DECOR003', N'Свеча декоративная "Дом"', 1, 490, 10, 19, 13, 3, 34, N'Ароматизированная, ваниль', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (49, N'DECOR004', N'Аромалампа керамическая', 1, 990, 10, 1, 13, 4, 15, N'Гжель, с чашей', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (50, N'DECOR005', N'Фоторамка деревянная (10х15)', 1, 390, 10, 26, 13, 3, 56, N'С резьбой', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (51, N'BUSINESS001', N'Ежедневник (кожа) А5', 1, 1590, 11, 28, 14, 5, 23, N'Черный, с логотипом', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (52, N'BUSINESS002', N'Ручка Parker (подарочная)', 1, 3990, 11, 29, 14, 4, 9, N'Металл, гравировка', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (53, N'BUSINESS003', N'Набор (ручка+ежедневник)', 2, 4990, 11, 29, 14, 5, 7, N'В подарочной коробке', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (54, N'BUSINESS004', N'Бейдж с логотипом', 1, 290, 11, 30, 14, 3, 67, N'Металлический, гравировка', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (55, N'BUSINESS005', N'Кружка с логотипом', 1, 490, 11, 30, 14, 4, 34, N'Керамика, полноцвет', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (56, N'ROMANTIC001', N'Свеча-сердце', 1, 590, 12, 31, 15, 4, 23, N'Красная, ароматическая', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (57, N'ROMANTIC002', N'Набор для романтического вечера', 2, 1990, 12, 31, 15, 5, 8, N'Свечи, лепестки, масло', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (58, N'ROMANTIC003', N'Валентинка ручной работы', 1, 290, 12, 31, 15, 3, 45, N'С кружевом', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (59, N'ROMANTIC004', N'Фоторамка-сердце', 1, 690, 12, 31, 15, 4, 19, N'Для двух фото', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (60, N'FUN001', N'Игрушка-антистресс (сквиш)', 1, 390, 13, 32, 16, 4, 89, N'Котик, мягкий', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (61, N'FUN002', N'Светильник-проектор звездного неба', 1, 1290, 13, 14, 16, 5, 23, N'С пультом', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (62, N'FUN003', N'Кружка-хамелеон (меняет цвет)', 1, 590, 13, 33, 16, 4, 34, N'С фото', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (63, N'FUN004', N'Будильник "Бегающий"', 1, 990, 13, 34, 16, 3, 12, N'С колесиками', NULL)
-INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (64, N'FUN005', N'Настольная игра "Подарочная"', 1, 890, 13, 35, 16, 4, 19, N'Для компании', NULL)
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (1, N'FIGUR001', N'Статуэтка "Сова" (керамика)', 1, 890, 1, 1, 1, 5, 34, N'Ручная роспись, высота 12см', N'figur1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (2, N'FIGUR002', N'Статуэтка "Кот" (керамика)', 1, 990, 1, 1, 1, 4, 28, N'Гжель, сине-белая роспись', N'figur2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (3, N'FIGUR003', N'Статуэтка "Дракон" (металл)', 1, 1290, 1, 2, 2, 3, 12, N'Каслинское литье, чугун', N'figur3.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (4, N'FIGUR004', N'Статуэтка "Лошадь" (дерево)', 1, 790, 1, 3, 3, 4, 23, N'Хохломская роспись', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (5, N'FIGUR005', N'Матрешка (5 в 1)', 1, 1590, 1, 4, 3, 5, 19, N'Классическая, ручная роспись', N'figur5.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (6, N'MAGN001', N'Магнит "Москва" (Кремль)', 1, 190, 2, 5, 4, 4, 156, N'Сувенирный, керамика', N'magn1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (7, N'MAGN002', N'Магнит "Санкт-Петербург"', 1, 190, 2, 5, 4, 3, 145, N'Символы города', N'magn2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (8, N'MAGN003', N'Магнит "Кот" (забавный)', 1, 150, 2, 6, 4, 5, 234, N'Смешной, с надписью', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (9, N'MAGN004', N'Набор магнитов "Города" (10 шт)', 2, 1590, 2, 5, 4, 4, 23, N'Разные города России', N'magn4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (10, N'KEY001', N'Брелок "Подкова" (металл)', 1, 290, 3, 7, 5, 4, 78, N'На удачу, никель', N'key1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (11, N'KEY002', N'Брелок "Монета" (счастливая)', 1, 350, 3, 7, 5, 3, 67, N'С инкрустацией, латунь', N'key2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (12, N'KEY003', N'Брелок "Животное" (кошка)', 1, 190, 3, 6, 5, 5, 89, N'Мягкий, плюшевый', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (13, N'KEY004', N'Набор брелоков (6 шт)', 2, 890, 3, 6, 5, 4, 34, N'Разные фигурки', N'key4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (14, N'KEY005', N'Брелок "Автомобильный"', 1, 390, 3, 8, 5, 3, 45, N'С подсветкой, кожа', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (15, N'TEA001', N'Чайный набор "Русский чай"', 2, 1290, 4, 9, 6, 5, 23, N'Чай, пряники, мед', N'tea1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (16, N'TEA002', N'Чайный набор "Китайский"', 2, 1590, 4, 10, 6, 4, 18, N'Пуэр, чайник, пиалы', N'tea2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (17, N'TEA003', N'Чайная пара (чашка+блюдце)', 2, 690, 4, 11, 6, 3, 34, N'Фарфор, золотой ободок', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (18, N'TEA004', N'Самовар (сувенирный) 1л', 1, 2990, 4, 12, 6, 5, 7, N'Сувенирный, расписной', N'tea4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (19, N'TEA005', N'Пряники тульские (набор)', 2, 590, 4, 12, 6, 4, 45, N'Печатные, разные начинки', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (20, N'NEWYEAR001', N'Елочная игрушка "Шар" (стекло)', 1, 390, 5, 13, 7, 5, 67, N'Красный, с блестками', N'newyear1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (21, N'NEWYEAR002', N'Елочная игрушка "Шишка"', 1, 290, 5, 13, 7, 4, 89, N'Золотая, пластик', N'newyear2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (22, N'NEWYEAR003', N'Набор игрушек (10 шт)', 2, 1990, 5, 13, 7, 5, 23, N'Разноцветные шары', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (23, N'NEWYEAR004', N'Гирлянда светодиодная 3м', 1, 890, 5, 14, 7, 4, 34, N'50 лампочек, мультицвет', N'newyear4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (24, N'NEWYEAR005', N'Искусственная елка 150см', 1, 3990, 5, 13, 7, 3, 12, N'Сборная, в коробке', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (25, N'EASTER001', N'Пасхальное яйцо (дерево)', 1, 490, 6, 3, 8, 4, 45, N'Ручная роспись', N'easter1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (26, N'EASTER002', N'Пасхальный набор (яйца+салфетки)', 2, 890, 6, 15, 8, 5, 23, N'5 яиц, наклейки', N'easter2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (27, N'EASTER003', N'Кулич сувенирный (керамика)', 1, 590, 6, 1, 8, 3, 19, N'С росписью', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (28, N'EASTER004', N'Пасхальный венок', 1, 990, 6, 16, 8, 4, 12, N'Декоративный, с цветами', N'easter4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (29, N'WEDD001', N'Свадебный бокалы (пара)', 2, 1590, 7, 17, 9, 5, 9, N'С гравировкой, хрусталь', N'wedd1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (30, N'WEDD002', N'Свадебный альбом (кожа)', 1, 2990, 7, 18, 9, 4, 7, N'30х30см, 50 листов', N'wedd2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (31, N'WEDD003', N'Подкова на свадьбу', 1, 890, 7, 7, 9, 3, 12, N'Деревянная, расписная', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (32, N'WEDD004', N'Свечи свадебные (набор)', 2, 690, 7, 19, 9, 4, 23, N'2 шт, с декором', N'wedd4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (33, N'BIRTH001', N'Открытка музыкальная', 1, 290, 8, 20, 10, 4, 67, N'С днем рождения, с мелодией', N'birth1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (34, N'BIRTH002', N'Открытка 3D (поп-ап)', 1, 390, 8, 20, 10, 3, 56, N'Объемная, ручная работа', N'birth2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (35, N'BIRTH003', N'Набор открыток (12 шт)', 2, 590, 8, 20, 10, 5, 34, N'Разные поводы', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (36, N'BIRTH004', N'Подарочная коробка (средняя)', 1, 190, 8, 21, 10, 2, 89, N'С крышкой, красная', N'birth4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (37, N'BIRTH005', N'Подарочный пакет (большой)', 1, 99, 8, 21, 10, 3, 145, N'С ручками, праздничный', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (38, N'SOUV001', N'Шкатулка "Хохлома" (малая)', 1, 990, 1, 3, 11, 5, 23, N'Дерево, роспись', N'souv1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (39, N'SOUV002', N'Шкатулка "Палех" (средняя)', 1, 2990, 1, 22, 11, 4, 8, N'Лаковая миниатюра', N'souv2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (40, N'SOUV003', N'Шкатулка музыкальная', 1, 1990, 1, 23, 11, 5, 12, N'С вращающейся балериной', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (41, N'SOUV004', N'Ларец (деревянный)', 1, 1590, 1, 3, 11, 3, 15, N'С замком, резной', N'souv4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (42, N'TEXT001', N'Платок павловопосадский', 1, 2490, 9, 24, 12, 5, 14, N'Шерсть, цветочный узор', N'text1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (43, N'TEXT002', N'Полотенце "Петухи" (льняное)', 1, 890, 9, 25, 12, 4, 23, N'С вышивкой, традиционное', N'text2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (44, N'TEXT003', N'Скатерть с вышивкой', 1, 1990, 9, 25, 12, 5, 9, N'Лен, 140х180см', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (45, N'TEXT004', N'Прихватки (набор 2 шт)', 2, 390, 9, 25, 12, 3, 45, N'С петухами, яркие', N'text4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (46, N'DECOR001', N'Панно настенное "Птица счастья"', 1, 1290, 10, 26, 13, 4, 12, N'Дерево, резьба', N'decor1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (47, N'DECOR002', N'Картина по номерам (набор)', 2, 890, 10, 27, 13, 5, 23, N'40х50см, краски в наборе', N'decor2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (48, N'DECOR003', N'Свеча декоративная "Дом"', 1, 490, 10, 19, 13, 3, 34, N'Ароматизированная, ваниль', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (49, N'DECOR004', N'Аромалампа керамическая', 1, 990, 10, 1, 13, 4, 15, N'Гжель, с чашей', N'decor4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (50, N'DECOR005', N'Фоторамка деревянная (10х15)', 1, 390, 10, 26, 13, 3, 56, N'С резьбой', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (51, N'BUSINESS001', N'Ежедневник (кожа) А5', 1, 1590, 11, 28, 14, 5, 23, N'Черный, с логотипом', N'bus1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (52, N'BUSINESS002', N'Ручка Parker (подарочная)', 1, 3990, 11, 29, 14, 4, 9, N'Металл, гравировка', N'bus2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (53, N'BUSINESS003', N'Набор (ручка+ежедневник)', 2, 4990, 11, 29, 14, 5, 7, N'В подарочной коробке', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (54, N'BUSINESS004', N'Бейдж с логотипом', 1, 290, 11, 30, 14, 3, 67, N'Металлический, гравировка', N'bus4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (55, N'BUSINESS005', N'Кружка с логотипом', 1, 490, 11, 30, 14, 4, 34, N'Керамика, полноцвет', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (56, N'ROMANTIC001', N'Свеча-сердце', 1, 590, 12, 31, 15, 4, 23, N'Красная, ароматическая', N'rom1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (57, N'ROMANTIC002', N'Набор для романтического вечера', 2, 1990, 12, 31, 15, 5, 8, N'Свечи, лепестки, масло', N'rom2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (58, N'ROMANTIC003', N'Валентинка ручной работы', 1, 290, 12, 31, 15, 3, 45, N'С кружевом', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (59, N'ROMANTIC004', N'Фоторамка-сердце', 1, 690, 12, 31, 15, 4, 19, N'Для двух фото', N'rom4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (60, N'FUN001', N'Игрушка-антистресс (сквиш)', 1, 390, 13, 32, 16, 4, 89, N'Котик, мягкий', N'fun1.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (61, N'FUN002', N'Светильник-проектор звездного неба', 1, 1290, 13, 14, 16, 5, 23, N'С пультом', N'fun2.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (62, N'FUN003', N'Кружка-хамелеон (меняет цвет)', 1, 590, 13, 33, 16, 4, 34, N'С фото', N'')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (63, N'FUN004', N'Будильник "Бегающий"', 1, 990, 13, 34, 16, 3, 12, N'С колесиками', N'fun4.jpg')
+INSERT [dbo].[Products] ([ProductID], [Articul], [ProductName], [UnitOfMeasurementID], [Price], [SupplierID], [ManufacturerID], [CategoryID], [Discount], [QuantityInStock], [Description], [image]) VALUES (64, N'FUN005', N'Настольная игра "Подарочная"', 1, 890, 13, 35, 16, 4, 19, N'Для компании', N'')
 GO
 INSERT [dbo].[Roles] ([RoleID], [RoleName]) VALUES (1, N'Администратор')
 INSERT [dbo].[Roles] ([RoleID], [RoleName]) VALUES (2, N'Менеджер')
