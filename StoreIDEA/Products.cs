@@ -30,12 +30,29 @@ namespace StoreIDEA
         public Nullable<int> Discount { get; set; }
         public Nullable<int> QuantityInStock { get; set; }
         public string Description { get; set; }
-        public byte[] image { get; set; }
+        public string image { get; set; }
     
         public virtual Categories Categories { get; set; }
         public virtual Manufacturers Manufacturers { get; set; }
         public virtual ICollection<OrderDetails> OrderDetails { get; set; }
         public virtual Suppliers Suppliers { get; set; }
         public virtual UnitOfMeasurements UnitOfMeasurements { get; set; }
+
+
+        public string ImagePath
+        {
+            get
+            {
+               
+                    if (!string.IsNullOrEmpty(image))
+                    {
+                        return @"\Images\"+image;
+                    }
+                else return @"\Images\picture.png";
+            }
+                
+               
+            
+        }
     }
 }
