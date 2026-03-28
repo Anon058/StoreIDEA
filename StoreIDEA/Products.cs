@@ -38,21 +38,16 @@ namespace StoreIDEA
         public virtual Suppliers Suppliers { get; set; }
         public virtual UnitOfMeasurements UnitOfMeasurements { get; set; }
 
-
         public string ImagePath
         {
             get
             {
-               
-                    if (!string.IsNullOrEmpty(image))
-                    {
-                        return @"\Images\"+image;
-                    }
-                else return @"\Images\picture.png";
+                if (!String.IsNullOrEmpty(image))
+                {
+                    return @"\Images\" + image;
+                }
+                else return @"Images\picture.png";
             }
-                
-               
-            
         }
     }
 }

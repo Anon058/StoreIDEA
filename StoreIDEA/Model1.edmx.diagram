@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4ce7bea87ca848b78b32cebc6e32098f" Name="Diagram1">
+      <Diagram DiagramId="40d9c656114c4b3da98f8d88b084c3bd" Name="Diagram1">
         <EntityTypeShape EntityType="user46020Model.Categories" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="user46020Model.Manufacturers" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="user46020Model.OrderDetails" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
@@ -18,14 +18,14 @@
         <EntityTypeShape EntityType="user46020Model.Users" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
         <AssociationConnector Association="user46020Model.FK_Products_Categories" ManuallyRouted="false" />
         <AssociationConnector Association="user46020Model.FK_Products_Manufacturers" ManuallyRouted="false" />
-        <AssociationConnector Association="user46020Model.FK_OrderDetails_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="user46020Model.FK_OrderDetails_Orders1" ManuallyRouted="false" />
         <AssociationConnector Association="user46020Model.FK_OrderDetails_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="user46020Model.FK_Orders_PickupPoints" ManuallyRouted="false" />
-        <AssociationConnector Association="user46020Model.FK_Orders_Statuses" ManuallyRouted="false" />
-        <AssociationConnector Association="user46020Model.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="user46020Model.FK_Orders_PickupPoints1" ManuallyRouted="false" />
+        <AssociationConnector Association="user46020Model.FK_Orders_Statuses1" ManuallyRouted="false" />
+        <AssociationConnector Association="user46020Model.FK_Orders_Users1" ManuallyRouted="false" />
         <AssociationConnector Association="user46020Model.FK_Products_Suppliers" ManuallyRouted="false" />
         <AssociationConnector Association="user46020Model.FK_Products_UnitOfMeasurements" ManuallyRouted="false" />
-        <AssociationConnector Association="user46020Model.FK_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="user46020Model.FK_Users_Roles1" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

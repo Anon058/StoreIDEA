@@ -226,6 +226,8 @@
     <Resource Include="Images\wedd1.jpg" />
     <Resource Include="Images\wedd2.jpg" />
     <Resource Include="Images\wedd4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
