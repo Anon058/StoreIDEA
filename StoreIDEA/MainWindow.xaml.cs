@@ -44,14 +44,14 @@ namespace StoreIDEA
             if(user.Password == passTb.Text)
             {
                 MessageBox.Show("Вы успешно авторизовались");
-                StaticObjects.desktopFrame.Navigate(new ProductPage());
+                StaticObjects.desktopFrame.Navigate(new ProductPage(user));
                 this.Close();
             }
         }
 
         private void EnterGuestButton_Click(object sender, RoutedEventArgs e)
         {
-            StaticObjects.desktopFrame.Navigate(new ProductPage());
+            StaticObjects.desktopFrame.Navigate(new ProductPage(null));
             this.Close();
         }
     }

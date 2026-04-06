@@ -71,6 +71,9 @@
     <Compile Include="DesktopWindow.xaml.cs">
       <DependentUpon>DesktopWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditPage.xaml.cs">
+      <DependentUpon>EditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manufacturers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Page Include="DesktopWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
