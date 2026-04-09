@@ -24,8 +24,7 @@
             </Grid>
             <ComboBox Name="CategoryCb" DisplayMemberPath="CategoryName" Visibility="Hidden" SelectionChanged="CategoryCb_SelectionChanged"/>
             <ComboBox Name="SupplierCb" DisplayMemberPath="SupplierName" Visibility="Hidden" SelectionChanged="SupplierCb_SelectionChanged"/>
-            <Button Name="AddBtn" Grid.Row="1" Grid.Column="2" Content="Добавить" Visibility="Hidden" HorizontalAlignment="Right" Margin="5" Click="AddBtn_Click"/>
-            <Button Name="EditBtn" Grid.Row="1" Grid.Column="2" Content="Редактировать" Visibility="Hidden" HorizontalAlignment="Right" Margin="5" Click="EditBtn_Click"/>
+            <Button Name="EditBtn" Grid.Row="1" Grid.Column="2" Content="Добавить/Редактировать" Visibility="Hidden" HorizontalAlignment="Right" Margin="5" Click="EditBtn_Click"/>
             <Button Name="RemoveBtn" Grid.Row="1" Grid.Column="2" Content="Удалить" Visibility="Hidden" HorizontalAlignment="Right" Margin="5" Click="RemoveBtn_Click"/>
         </StackPanel>
         <ListView FontFamily="Comic Sans MS" Grid.Row="1" x:Name="productListView" ScrollViewer.HorizontalScrollBarVisibility="Disabled">

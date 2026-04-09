@@ -21,12 +21,11 @@ namespace StoreIDEA
     public partial class ProductPage : Page
     {
         DBEntities db = new DBEntities();
-        public Products Product { get; }
         private readonly Users _user;
         public ProductPage(Users user)
         {
             InitializeComponent();
-            productListView.ItemsSource = db.Products.ToList();
+            LoadData();
             _user = user;
 
             if(user == null)
@@ -35,7 +34,6 @@ namespace StoreIDEA
             }
             if(user.RoleID == 1)
             {
-                AddBtn.Visibility = Visibility.Visible;
                 EditBtn.Visibility = Visibility.Visible;
                 RemoveBtn.Visibility = Visibility.Visible;
                 CategoryCb.Visibility = Visibility.Visible;
@@ -48,6 +46,15 @@ namespace StoreIDEA
             }
         }
        
+        private void LoadData()
+        {
+            if(EditPage.count == 0)
+            {
+                productListView.Items.Clear();
+            }
+
+            productListView.ItemsSource = db.Products.ToList();
+        }
         private void Name2Click(object sender, RoutedEventArgs e)
         {
 
@@ -57,18 +64,21 @@ namespace StoreIDEA
             
         }
 
-        private void AddBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
             var selectedItem = productListView.SelectedItem as Products;
 
+            if(selectedItem == null)
+            {
+                StaticObjects.desktopFrame.Navigate(new EditPage(null, () => LoadData()));
+                return;
+            }
+
             Products selectedProduct = db.Products.FirstOrDefault(x => x.ProductID == selectedItem.ProductID);
 
-            StaticObjects.desktopFrame.Navigate(new EditPage(selectedProduct));
+            EditPage content = new EditPage(selectedProduct, () => LoadData());
+            StaticObjects.desktopFrame.Navigate(content);
         }
 
         private void RemoveBtn_Click(object sender, RoutedEventArgs e)

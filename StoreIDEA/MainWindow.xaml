@@ -8,10 +8,10 @@
         Title="MainWindow" Height="350" Width="400">
     <Grid>
         <StackPanel>
-           <TextBlock Grid.Row="0" Text="Логин" Height="25" Width="250"  VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="14" Foreground="Black"/>  
-       <TextBox x:Name="loginTb" Height="25" Width="250" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="14" Foreground="Black" FontFamily="Times New Roman"/> 
-         <TextBlock Text="Пароль" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14" Grid.RowSpan="2"/>
-       <TextBox x:Name="passTb" Height="25" Width="250"  VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+           <TextBlock Grid.Row="0" Text="Логин" Height="25" Width="250"  VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="14"/>  
+       <TextBox x:Name="loginTb" Height="25" Text="i.podarkov@ideya.ru" Width="250" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="14"  FontFamily="Times New Roman"/>
+            <TextBlock Text="Пароль" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14" Grid.RowSpan="2"/>
+            <TextBox x:Name="passTb" Height="25" Width="250" Text="IvanGift2026" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
         <Button  Content="Войти" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20" Height="50" Width="100" Click="EnterButton_Click"/>
         <Button  Content="Гостевой вход" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20" Height="50" Width="100" Click="EnterGuestButton_Click"/>
         </StackPanel>

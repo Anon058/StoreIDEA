@@ -51,7 +51,7 @@
           <Key>
             <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Articul" Type="nvarchar" MaxLength="20" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
           <Property Name="UnitOfMeasurementID" Type="int" />
@@ -337,7 +337,7 @@
           <Key>
             <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Articul" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UnitOfMeasurementID" Type="Int32" />

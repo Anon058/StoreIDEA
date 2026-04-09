@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,9 +24,12 @@ namespace StoreIDEA
     {
         private Products _product;
         DBEntities db = new DBEntities();
-        public EditPage(Products product = null)
+        public static int count = 0;
+        private Action _saveCallback;
+        public EditPage(Products product, Action saveCallback)
         {
             InitializeComponent();
+            _saveCallback = saveCallback;
             UnitOfMeasurementCb.ItemsSource = db.UnitOfMeasurements.ToList();
             SupplierCb.ItemsSource = db.Suppliers.ToList();
             ManufacturerCb.ItemsSource = db.Manufacturers.ToList();
@@ -34,12 +38,16 @@ namespace StoreIDEA
             if(product == null)
             {
                 Title = "Добавление товара";
+                EditBtn.Content = "Добавить товар";
+                count = 0;
                 _product = new Products();
             }
             else
             {
                 Title = "Редактирование товара";
+                EditBtn.Content = "Редактировать товар";
                 _product = product;
+                count = 1;
                 LoadData();
             }
         }
@@ -62,7 +70,6 @@ namespace StoreIDEA
         {
             try
             {
-
                 _product.Articul = ArticulTb.Text;
                 _product.ProductName = ProductNameTb.Text;
                 _product.UnitOfMeasurementID = (int)UnitOfMeasurementCb.SelectedValue;
@@ -73,12 +80,30 @@ namespace StoreIDEA
                 _product.Discount = int.Parse(DiscountTb.Text);
                 _product.Description = DescriptionTb.Text;
 
-                _product.ProductID = db.Products.Max(x => x.ProductID) + 1;
-                db.Products.Add(_product);
+                // если 0, то добавление, а если 1, то редактирование
+                if (count == 0)
+                {
+                    db.Products.Add(_product);
+                }
+                if (count == 1)
+                {
+                    var editProduct = db.Products.First(p => p.ProductID == _product.ProductID);
 
+                    editProduct.Articul = _product.Articul;
+                    editProduct.ProductName = _product.ProductName;
+                    editProduct.UnitOfMeasurementID = _product.UnitOfMeasurementID;
+                    editProduct.Price = _product.Price;
+                    editProduct.SupplierID = _product.SupplierID;
+                    editProduct.ManufacturerID = _product.ManufacturerID;
+                    editProduct.CategoryID = _product.CategoryID;
+                    editProduct.Discount = _product.Discount;
+                    editProduct.Description = _product.Description;
+                }
+                MessageBox.Show("Данные сохранены");
                 db.SaveChanges();
-                MessageBox.Show("Сохранено");
+
                 StaticObjects.desktopFrame.GoBack();
+                _saveCallback?.Invoke();
             }
             catch (Exception ex)
             {

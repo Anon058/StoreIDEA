@@ -4,6 +4,24 @@
              xmlns:local="clr-namespace:StoreIDEA"
              StartupUri="DesktopWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="Primary Color" Color="#FFFAFA"/>
+        <SolidColorBrush x:Key="Secondary Color" Color="#FF69B4"/>
+        <SolidColorBrush x:Key="Accent Color" Color="#FFD700"/>
+        <Style TargetType="TextBlock">
+            <Setter Property="Background" Value="{StaticResource Secondary Color}"/>
+            <Setter Property="Foreground" Value="{StaticResource Accent Color}"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        </Style>
+        <Style TargetType="Window">
+            <Setter Property="Background" Value="{StaticResource Primary Color}"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource Secondary Color}"/>
+            <Setter Property="Foreground" Value="{StaticResource Accent Color}"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="{StaticResource Primary Color}"/>
+            <Setter Property="Foreground" Value="{StaticResource Accent Color}"/>
+        </Style>
     </Application.Resources>
 </Application>
